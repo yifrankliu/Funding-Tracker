@@ -38,7 +38,7 @@ SheetJS · Anthropic SDK (optional) · Google Sheets API (optional) · deployed 
 ### 1. Supabase
 
 1. Create a project at supabase.com (use a shared UOFC Google account, not a personal one).
-2. SQL Editor → paste and run `supabase/migrations/0001_init.sql`.
+2. SQL Editor → paste and run each file in `supabase/migrations/` in order (`0001_init.sql`, then `0002_delete_upload.sql`, …).
 3. Authentication → Providers → **Google**: enable it. You need a Google OAuth client:
    - Google Cloud Console → APIs & Services → Credentials → Create OAuth client (Web).
    - Authorised redirect URI: `https://<your-project>.supabase.co/auth/v1/callback`.
@@ -98,7 +98,7 @@ src/lib/sheets/mirror.ts            Google Sheets rewrite
 src/lib/pivot.ts                    clubs × sources pivot
 src/app/page.tsx                    master sheet (dashboard)
 src/app/upload/                     drag-and-drop → review → save wizard
-src/app/uploads/                    history with superseded uploads and file downloads
+src/app/uploads/                    history, file downloads, delete (restores the superseded upload)
 src/app/clubs/                      aliases, rename, merge
 src/app/admin/                      sources, members, roles
 src/app/api/parse|uploads/commit|sheets/sync
