@@ -45,7 +45,9 @@ SheetJS · Anthropic SDK (optional) · Google Sheets API (optional) · deployed 
    - Paste the client ID and secret into Supabase.
 4. Authentication → URL Configuration: set Site URL to your Vercel URL and add
    `http://localhost:3000/**` and `https://<your-app>.vercel.app/**` to Redirect URLs.
-5. Project Settings → API: copy the URL, anon key and service-role key into `.env.local`.
+5. Project Settings → **Data API**: copy the Project URL. Project Settings → **API Keys**: copy the
+   **publishable** key (→ `NEXT_PUBLIC_SUPABASE_ANON_KEY`) and create a **secret** key
+   (→ `SUPABASE_SERVICE_ROLE_KEY`). The legacy anon / service_role JWTs work too.
 
 ### 2. Local run
 
